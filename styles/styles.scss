@@ -1,0 +1,217 @@
+@import "./color";
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+  font-style: normal;
+  font-family: "Inter", sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+input {
+  font-family: "Nunito", sans-serif;
+  font-style: normal;
+  color: $dark_text;
+
+  &::placeholder {
+    font-family: "Nunito", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    color: $placeholder;
+    font-size: 0.8rem;
+    line-height: 1.2rem;
+  }
+}
+
+/* --------------------------------------HEADER-------------------------------------- */
+header {
+  position: relative;
+  .navbar {
+    width: 100%;
+    background: $white;
+    z-index: 200;
+    position: fixed;
+    box-shadow: $nav_shadow;
+    padding-right: 1rem;
+
+    @media screen and (min-width: 576px) {
+      padding: 0 1rem;
+    }
+
+    @media screen and (min-width: 1200px) {
+      padding: 0 4rem;
+    }
+    @media screen and (min-width: 1400px) {
+      padding: 0 6rem;
+    }
+
+    ul {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 2rem;
+
+      @media screen and (min-width: 992px) {
+        gap: 1.5rem;
+      }
+
+      @media screen and (min-width: 1200px) {
+        gap: 2.5rem;
+      }
+
+      li {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        font-size: 1.2rem;
+        font-weight: 500;
+        line-height: normal;
+        letter-spacing: 0em;
+        text-align: left;
+        color: $dark_text;
+
+        &:hover {
+          color: $primary;
+          font-weight: 600;
+
+          /* add animation on hover  */
+        }
+      }
+    }
+
+    &_inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .nav_logo {
+        width: 3rem;
+        aspect-ratio: 1/1;
+        position: relative;
+
+        @media screen and (min-width: 992px) {
+          width: 4.5rem;
+        }
+      }
+      .nav_btn {
+        padding: 1rem 2rem;
+        border: 1px solid $btn_bg;
+        border-radius: 6rem;
+        background: $white;
+        font-weight: 700;
+        font-size: 1.1rem;
+        cursor: pointer;
+        color: $btn_bg;
+        &:hover {
+          color: $white;
+          background: $btn_bg;
+        }
+      }
+
+      .menu_items,
+      .nav_btn {
+        display: none;
+      }
+
+      .toogle_btn {
+        display: block;
+        color: $black;
+        font-size: 2rem;
+        cursor: pointer;
+        z-index: 100;
+      }
+
+      @media screen and (min-width: 992px) {
+        .menu_items,
+        .nav_btn {
+          display: block;
+        }
+
+        .toogle_btn {
+          display: none;
+        }
+      }
+    }
+  }
+
+  /* DROPDOWN MENU */
+
+  .dropdown_menu {
+    position: absolute;
+    top: 4.2rem;
+    z-index: 100;
+    border-radius: 1rem;
+    padding: 1.54rem 0;
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+    background: $white;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1rem;
+    overflow: hidden;
+    right: -50rem;
+    transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+    @media screen and (min-width: 576px) {
+      width: 300px;
+    }
+    @media screen and (max-width: 992px) {
+      position: fixed;
+    }
+
+    &.open {
+      right: 0;
+    }
+
+    ul {
+      text-align: center;
+      display: grid;
+      gap: 1rem;
+
+      li {
+        cursor: pointer;
+        color: $dark_text;
+        &:hover {
+          color: $primary;
+        }
+      }
+    }
+
+    @media screen and (min-width: 992px) {
+      display: none;
+    }
+  }
+}
