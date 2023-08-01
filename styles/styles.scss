@@ -37,21 +37,6 @@ a {
   color: inherit;
 }
 
-input {
-  font-family: "Nunito", sans-serif;
-  font-style: normal;
-  color: $dark_text;
-
-  &::placeholder {
-    font-family: "Nunito", sans-serif;
-    font-style: normal;
-    font-weight: 500;
-    color: $placeholder;
-    font-size: 0.8rem;
-    line-height: 1.2rem;
-  }
-}
-
 /* --------------------------------------HEADER-------------------------------------- */
 header {
   position: relative;
@@ -115,31 +100,17 @@ header {
       justify-content: space-between;
 
       .nav_logo {
-        width: 3rem;
-        aspect-ratio: 1/1;
+        width: 13rem;
+        height: 4rem;
         position: relative;
 
         @media screen and (min-width: 992px) {
-          width: 4.5rem;
-        }
-      }
-      .nav_btn {
-        padding: 1rem 2rem;
-        border: 1px solid $btn_bg;
-        border-radius: 6rem;
-        background: $white;
-        font-weight: 700;
-        font-size: 1.1rem;
-        cursor: pointer;
-        color: $btn_bg;
-        &:hover {
-          color: $white;
-          background: $btn_bg;
+          width: 16rem;
+          height: 6rem;
         }
       }
 
-      .menu_items,
-      .nav_btn {
+      .menu_items {
         display: none;
       }
 
@@ -212,6 +183,168 @@ header {
 
     @media screen and (min-width: 992px) {
       display: none;
+    }
+  }
+}
+
+/* --------------------------------------HERO SECTION-------------------------------------- */
+
+.hero {
+  &_sec {
+    background: $secondary_bg;
+    margin-top: 4.6rem;
+    height: 100%;
+    min-height: 30vh;
+    @media screen and (min-width: 992px) {
+      margin-top: 6.5rem;
+    }
+
+    &_inner {
+      display: grid;
+      align-items: center;
+      place-content: center;
+      justify-content: center;
+      padding: 2.5rem 1rem 1rem 1rem;
+      @media screen and (min-width: 992px) {
+        padding: 2.5rem;
+      }
+    }
+  }
+
+  &_header {
+    text-align: center;
+    color: $header_text;
+    font-size: 1.2rem;
+    font-weight: 900;
+    line-height: normal;
+    @media screen and (min-width: 992px) {
+      font-size: 1.8rem;
+      margin-top: 2rem;
+    }
+  }
+
+  &_bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+
+    &_left {
+      width: 100%;
+      font-weight: 600;
+      font-size: 1rem;
+      text-align: center;
+      line-height: 2rem;
+      max-width: 35rem;
+      color: $light_text;
+      @media screen and (min-width: 992px) {
+        font-size: 2rem;
+        line-height: 3.5rem;
+      }
+    }
+
+    &_right {
+      display: none;
+      @media screen and (min-width: 992px) {
+        display: block;
+      }
+      img {
+        width: fit-content;
+      }
+    }
+  }
+}
+
+/* --------------------------------------WE OFFER  SECTION-------------------------------------- */
+
+.we_offer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &_inner {
+    padding: 3rem 1rem;
+    text-align: center;
+
+    @media screen and (min-width: 992px) {
+      text-align: left;
+      padding: 6rem 1rem;
+    }
+  }
+
+  &_header {
+    text-align: center;
+    font-weight: 600;
+    font-size: 1.4rem;
+    color: $primary;
+    text-transform: capitalize;
+    margin: 1rem 0;
+  }
+
+  .offer_box {
+    &_sec {
+      padding: 2.5rem 0;
+      display: grid;
+      justify-content: space-between;
+      align-items: center;
+      place-items: center;
+      gap: 2.5rem;
+      @media screen and (min-width: 992px) {
+        display: flex;
+      }
+    }
+
+    width: 100%;
+    min-width: 20vw;
+    cursor: pointer;
+    background: $white;
+    color: $light_text;
+    box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 12px;
+
+    &:hover {
+      box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px,
+        rgba(17, 17, 26, 0.1) 0px 0px 8px;
+    }
+    @media screen and (min-width: 992px) {
+      width: 20rem;
+    }
+
+    &_inner {
+      padding: 1rem;
+      img {
+        width: 5rem;
+        aspect-ratio: 1/1;
+      }
+    }
+
+    &_text {
+      width: 100%;
+      max-width: 13rem;
+      margin-top: 2rem;
+
+      @media screen and (min-width: 992px) {
+        max-width: 15rem;
+      }
+
+      h3 {
+        font-size: 1.2rem;
+        font-weight: 600;
+        color: $primary;
+        line-height: normal;
+        @media screen and (min-width: 992px) {
+          font-size: 1.4rem;
+        }
+      }
+
+      p {
+        font-size: 1rem;
+        font-weight: 500;
+        line-height: normal;
+
+        @media screen and (min-width: 992px) {
+          letter-spacing: 0.1em;
+        }
+      }
     }
   }
 }
