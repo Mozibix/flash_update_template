@@ -3,6 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="theme-color" content="#000000" />
+    <link rel="icon" sizes="192x192" href="./images/flash_logo.jpg" />
+    <link rel="apple-touch-icon" href="./images/flash_logo.jpg" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
@@ -19,11 +24,7 @@
       <div class="navbar animations_left">
         <div class="navbar_inner">
           <a href="#nav_sec">
-            <img
-              src="./files/images/favicon4.png"
-              alt="logo"
-              class="nav_logo"
-            />
+            <img src="./images/flash_logo2.png" alt="logo" class="nav_logo" />
           </a>
 
           <div class="menu_items">
@@ -45,8 +46,6 @@
               </a>
             </ul>
           </div>
-
-          <!-- <button class="nav_btn">Get Our App</button> -->
 
           <div class="toogle_btn">
             <i class="fa fa-bars"></i>
@@ -73,16 +72,79 @@
           <a href="#news_id">
             <li>Blog</li>
           </a>
-          <!-- <a href="#team_id">
-            <li>Our Team</li>
-          </a> -->
-          <!-- <a href="#">
-            <li>
-              <button class="nav_btn mobile">Get Our App</button>
-            </li>
-          </a> -->
         </ul>
       </div>
     </header>
+
+    <!-- ----------------------------MAIN SECTION---------------------------- -->
+    <main>
+      <!-- ----------------------------HERO SECTION---------------------------- -->
+      <section class="hero_sec">
+        <div class="hero_sec_inner">
+          <div class="hero_header">
+            <h2>Welcome to Flashupdates9ja</h2>
+          </div>
+          <div class="hero_bottom">
+            <div class="hero_bottom_left">
+              <p>
+                We are a News/entertainment media || A telecom company, || A
+                digital marketplace for buying/selling products and services.
+              </p>
+            </div>
+
+            <div class="hero_bottom_right">
+              <img src="./images/hero_img.png" alt="hero-images" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ----------------------------WE OFFER SECTION---------------------------- -->
+      <section class="we_offer">
+        <div class="we_offer_inner">
+          <div class="we_offer_header">
+            <h3>services we offer</h3>
+          </div>
+          <!-- BOX-SECTION -->
+          <div class="offer_box_sec">
+            <!-- BOX -->
+            <div class="offer_box">
+              <div class="offer_box_inner">
+                <img src="./images/icon1.png" alt="logo" class="logo" />
+
+                <div class="offer_box_text">
+                  <h3>Flash Telecom</h3>
+
+                  <p>Buy data and airtime in cheap price.</p>
+                </div>
+              </div>
+            </div>
+            <!-- BOX -->
+            <div class="offer_box">
+              <div class="offer_box_inner">
+                <img src="./images/icon2.png" alt="logo" class="logo" />
+
+                <div class="offer_box_text">
+                  <h3>Flash News</h3>
+
+                  <p>Get latest Nigeria News from verified authors.</p>
+                </div>
+              </div>
+            </div>
+            <!-- BOX -->
+            <div class="offer_box">
+              <div class="offer_box_inner">
+                <img src="./images/icon3.png" alt="logo" class="logo" />
+
+                <div class="offer_box_text">
+                  <h3>Flash Digital Courses</h3>
+                  <p>Learn digital courses with easy.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
   </body>
 </html>
