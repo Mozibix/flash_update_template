@@ -1,56 +1,56 @@
-/* SCROLL FUNCTIONALITY */
-const animationUp = document.querySelectorAll(".animations_up");
-const animationDown = document.querySelectorAll(".animations_down");
-const animationLeft = document.querySelectorAll(".animations_left");
-const animationRight = document.querySelectorAll(".animations_right");
-const animationSpecial = document.querySelectorAll(".animations_left_special");
-const animation = document.querySelectorAll(".animations");
+/* PRE-LOADER FUNCTIONALITY*/
+document.addEventListener("DOMContentLoaded", () => {
+  const preloader = document.querySelector("#preloader_sec");
+  preloader.classList.remove("hidden");
+  preloader.classList.add("preloader");
 
-const observer = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("scroll-animation");
-      } else {
-        entry.target.classList.remove("scroll-animation");
-      }
-    });
-  },
-  { threshold: 0.1 }
-);
+  void preloader.offsetWidth;
 
-for (let i = 0; i < animationUp.length; i++) {
-  const elements = animationUp[i];
+  setTimeout(() => {
+    preloader.classList.add("hidden");
+  }, 1000);
+});
 
-  observer.observe(elements);
-}
-/*  */
-for (let i = 0; i < animationDown.length; i++) {
-  const elements = animationDown[i];
+const toogleBtn = document.querySelector(".toogle_btn");
+const toogleBtnIcon = document.querySelector(".toogle_btn i");
+const menu = document.querySelector(".dropdown_menu");
+const menuLists = document.querySelectorAll(".menu_lists li");
 
-  observer.observe(elements);
-}
-/*  */
-for (let i = 0; i < animationLeft.length; i++) {
-  const elements = animationLeft[i];
+/* ACTIVE LINKS */
+const removeActive = () => {
+  menuLists.forEach((link) => {
+    link.classList.remove("active");
+  });
+};
 
-  observer.observe(elements);
-}
-/*  */
-for (let i = 0; i < animationRight.length; i++) {
-  const elements = animationRight[i];
+menuLists.forEach((link) => {
+  link.addEventListener("click", () => {
+    removeActive();
+    link.classList.add("active");
+  });
+});
 
-  observer.observe(elements);
-}
-/*  */
-for (let i = 0; i < animationSpecial.length; i++) {
-  const elements = animationSpecial[i];
+toogleBtn.onclick = () => {
+  menu.classList.toggle("open");
 
-  observer.observe(elements);
-}
-/*  */
-for (let i = 0; i < animation.length; i++) {
-  const elements = animation[i];
+  const isOpen = menu.classList.contains("open");
 
-  observer.observe(elements);
-}
+  toogleBtnIcon.classList = isOpen ? "fa fa-times" : "fa fa-bars";
+};
+
+const isClose = () => {
+  const isClose = menu.classList.remove("open");
+
+  toogleBtnIcon.classList = isClose ? "fa fa-times" : "fa fa-bars";
+};
+
+document.onclick = (e) => {
+  if (!toogleBtn.contains(e.target) && !menu.contains(e.target)) {
+    isClose();
+  }
+};
+document.onscroll = (e) => {
+  if (!toogleBtn.contains(e.target) && !menu.contains(e.target)) {
+    isClose();
+  }
+};
