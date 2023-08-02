@@ -47,7 +47,7 @@ a {
   right: 0;
   left: 0;
   bottom: 0;
-  z-index: 100;
+  z-index: 1000;
   background: #fff;
 }
 .preloader_inner {
@@ -71,7 +71,7 @@ a {
 }
 .preloader.hidden {
   opacity: 0;
-  z-index: 0;
+  z-index: -100;
 }
 
 @keyframes preloader {
@@ -390,6 +390,25 @@ header .dropdown_menu ul li:hover {
     letter-spacing: 0.1em;
   }
 }
+.we_offer .offer_box_btn {
+  border: none;
+  border-radius: 5px;
+  width: 8rem;
+  height: 2.8rem;
+  margin-top: 1.5rem;
+  border: 1px solid #fe0002;
+  background: #fff;
+  color: #000;
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: capitalize;
+  cursor: pointer;
+}
+.we_offer .offer_box_btn:hover {
+  background: #fe0002;
+  color: #fff;
+  font-weight: 800;
+}
 
 /* --------------------------------------FOOTER  SECTION-------------------------------------- */
 .footer {
@@ -418,7 +437,7 @@ header .dropdown_menu ul li:hover {
 }
 @media screen and (min-width: 992px) {
   .footer_inner img {
-    width: 15rem;
+    width: 13rem;
     height: 4rem;
   }
 }/*# sourceMappingURL=styles.css.map */
