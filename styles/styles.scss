@@ -540,6 +540,10 @@ footer {
         font-size: 1.5rem;
         margin-bottom: 0.8rem;
       }
+
+      .quick_links {
+        text-transform: capitalize;
+      }
     }
     &_bottom {
       margin-top: 3rem;
@@ -556,6 +560,63 @@ footer {
         font-size: 1rem;
       }
     }
+  }
+}
+
+/*  */
+.contents_sec {
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  position: relative;
+
+  ul {
+    @media screen and (min-width: 992px) {
+      margin-left: 1.5rem;
+    }
+    li {
+      margin-block: 0.5rem;
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+    }
+  }
+
+  h2 {
+    text-align: center;
+    font-size: 1.5em;
+    color: #333;
+    text-decoration: underline;
+    margin-block: 1rem 0.5rem;
+  }
+
+  p {
+    margin-bottom: 20px;
+  }
+}
+
+/*  */
+.privacy-policy {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  position: relative;
+
+  h2 {
+    text-align: center;
+    font-size: 1.5em;
+    color: #333;
+    text-decoration: underline;
+    margin-block: 1rem 0.5rem;
+  }
+
+  ul {
+    list-style-type: disc;
+    margin-left: 20px;
+  }
+
+  p {
+    margin-bottom: 20px;
   }
 }
 
@@ -606,4 +667,24 @@ footer {
 .scroll-animation {
   opacity: 1;
   transform: translate(0);
+}
+
+/* DIAMOND DOT */
+.circle {
+  margin-left: 1rem;
+  .diamond_dot {
+    rotate: 90deg;
+    border-radius: 50%;
+  }
+}
+
+.diamond_dot {
+  display: block;
+  background: $primary;
+  min-width: 0.4rem;
+  max-width: 0.4rem;
+  margin: 0 0.5rem;
+  margin-top: 0.3rem;
+  rotate: 45deg;
+  aspect-ratio: 1/1;
 }
